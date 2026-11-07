@@ -86,9 +86,22 @@ Sentiment_Analysis_IMDB_Reviews/
 
 ---
 
+## 📊 Dataset Insights
+* **Source**: IMDb 50K Movie Reviews Dataset
+* **Total Samples**: 50,000 labeled reviews
+* **Class Distribution**:
+  * Positive: **25,000** reviews (50%)
+  * Negative: **25,000** reviews (50%)
+  * *(The dataset is perfectly balanced, meaning our model will not be biased toward either sentiment).*
+* **Key Observations**:
+  * Contains raw web text with HTML line breaks (`<br />`).
+  * Features diverse lengths ranging from short 2-sentence reactions to multi-paragraph analytical essays.
+
+---
+
 ## 🚦 Roadmap & Progress
 - [x] **Step 1:** Project setup, directory architecture & `README.md` blueprint
-- [ ] **Step 2:** Dataset acquisition (IMDb 50,000 dataset) & Exploratory Data Analysis (EDA)
+- [x] **Step 2:** Dataset acquisition (IMDb 50,000 dataset) & Exploratory Data Analysis (EDA)
 - [ ] **Step 3:** Text cleaning and preprocessing module
 - [ ] **Step 4:** Feature extraction with TF-IDF vectorization
 - [ ] **Step 5:** Model training with Logistic Regression
