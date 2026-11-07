@@ -3,6 +3,14 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Large datasets (standard practice: don't commit large CSVs to GitHub)
+data/*.csv
+data/*.zip
+
+# Saved model artifacts (large binaries)
+models/*.joblib
+models/*.pkl
+
 # Environments
 .env
 .venv
@@ -16,4 +24,3 @@ ENV/
 # OS files
 .DS_Store
 Thumbs.db
-
