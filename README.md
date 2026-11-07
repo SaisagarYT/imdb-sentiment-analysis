@@ -102,7 +102,7 @@ Sentiment_Analysis_IMDB_Reviews/
 ## 🚦 Roadmap & Progress
 - [x] **Step 1:** Project setup, directory architecture & `README.md` blueprint
 - [x] **Step 2:** Dataset acquisition (IMDb 50,000 dataset) & Exploratory Data Analysis (EDA)
-- [ ] **Step 3:** Text cleaning and preprocessing module
+- [x] **Step 3:** Text cleaning and preprocessing module
 - [ ] **Step 4:** Feature extraction with TF-IDF vectorization
 - [ ] **Step 5:** Model training with Logistic Regression
 - [ ] **Step 6:** Model evaluation, confusion matrix & error analysis
