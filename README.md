@@ -67,6 +67,8 @@ Sentiment_Analysis_IMDB_Reviews/
 ├── notebooks/             # Interactive Jupyter notebooks for experimentation & EDA
 ├── reports/
 │   └── figures/           # Visualizations (confusion matrix, word importance charts)
+├── train.py               # End-to-end training and evaluation script
+├── predict.py             # CLI and interactive sentiment prediction tool
 ├── README.md              # Project documentation and summary
 └── requirements.txt       # Project dependencies
 ```
@@ -81,8 +83,8 @@ Sentiment_Analysis_IMDB_Reviews/
 ## 🛠️ Tech Stack
 * **Language**: Python 3.14+
 * **Machine Learning**: `scikit-learn`
-* **Data Manipulation**: `pandas`, `numpy`
-* **Visualization**: `matplotlib`, `seaborn`
+* **Visualization**: `matplotlib`
+* **Model Serialization**: `joblib`
 
 ---
 
@@ -99,6 +101,50 @@ Sentiment_Analysis_IMDB_Reviews/
 
 ---
 
+## 📈 Results & Evaluation
+
+The model was evaluated on a strictly held-out test set of **10,000 unseen reviews** (20% split):
+
+| Metric | Score | Explanation |
+| :--- | :---: | :--- |
+| **Accuracy** | **90.22%** | Out of 10,000 test reviews, over 9,020 were correctly classified. |
+| **Precision** | **89.48%** | When predicting positive, the model is correct 89.5% of the time. |
+| **Recall** | **91.16%** | The model captured 91.2% of all actual positive reviews. |
+| **F1-Score** | **90.31%** | Strong harmonic balance between precision and recall. |
+
+### Confusion Matrix
+The confusion matrix demonstrates strong diagonal dominance (correct predictions) with low false positive and false negative rates:
+
+![Confusion Matrix](reports/figures/confusion_matrix.png)
+
+### 🔍 Error Analysis (Why Did the Model Make Mistakes?)
+Analyzing the misclassified reviews revealed three primary failure modes:
+1. **Sarcasm and Irony**: Reviews using words like *"masterpiece"* or *"brilliant"* in a mocking tone to describe terrible movies.
+2. **Mixed Sentiment**: Reviews where the author praised individual elements (e.g., cinematography, music) before concluding with a negative verdict.
+3. **Double Negatives**: Complex phrasing like *"not without its charms"* or *"hardly unwatchable"*.
+
+---
+
+## 🚀 How to Run
+
+### 1. Train the Model
+Run the end-to-end training pipeline on the 50,000 reviews:
+```bash
+python train.py
+```
+
+### 2. Predict Custom Reviews
+Test any movie review directly via command line:
+```bash
+python predict.py "This movie was an absolute masterpiece with breathtaking visuals!"
+```
+Or launch interactive mode:
+```bash
+python predict.py
+```
+
+---
+
 ## 🚦 Roadmap & Progress
 - [x] **Step 1:** Project setup, directory architecture & `README.md` blueprint
 - [x] **Step 2:** Dataset acquisition (IMDb 50,000 dataset) & Exploratory Data Analysis (EDA)
@@ -106,5 +152,5 @@ Sentiment_Analysis_IMDB_Reviews/
 - [x] **Step 4:** Feature extraction with TF-IDF vectorization
 - [x] **Step 5:** Model training with Logistic Regression
 - [x] **Step 6:** Model evaluation, confusion matrix & error analysis
-- [ ] **Step 7:** End-to-end training pipeline & interactive review prediction
+- [x] **Step 7:** End-to-end training pipeline & interactive review prediction
 
