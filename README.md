@@ -105,6 +105,6 @@ Sentiment_Analysis_IMDB_Reviews/
 - [x] **Step 3:** Text cleaning and preprocessing module
 - [x] **Step 4:** Feature extraction with TF-IDF vectorization
 - [x] **Step 5:** Model training with Logistic Regression
-- [ ] **Step 6:** Model evaluation, confusion matrix & error analysis
-- [ ] **Step 7:** Interactive review prediction & portfolio wrap-up
+- [x] **Step 6:** Model evaluation, confusion matrix & error analysis
+- [ ] **Step 7:** End-to-end training pipeline & interactive review prediction
 
