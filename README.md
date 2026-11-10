@@ -104,7 +104,7 @@ Sentiment_Analysis_IMDB_Reviews/
 - [x] **Step 2:** Dataset acquisition (IMDb 50,000 dataset) & Exploratory Data Analysis (EDA)
 - [x] **Step 3:** Text cleaning and preprocessing module
 - [x] **Step 4:** Feature extraction with TF-IDF vectorization
-- [ ] **Step 5:** Model training with Logistic Regression
+- [x] **Step 5:** Model training with Logistic Regression
 - [ ] **Step 6:** Model evaluation, confusion matrix & error analysis
 - [ ] **Step 7:** Interactive review prediction & portfolio wrap-up
 
